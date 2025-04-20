@@ -15,7 +15,7 @@ That single scalar lets each layer glide from an *almost‑linear* regime (small
 
 ---
 
-# `decision_boundaries/` – synthetic‑dataset experiments
+# `decision_boundaries/` 
 
 The folder contains **`Decision Boundaries.ipynb`**, which reproduces the key visual experiments (Figures 9‑12, Table 1) from the LASA paper.
 
