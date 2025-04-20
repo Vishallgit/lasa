@@ -50,7 +50,6 @@ The folder contains **`Decision Boundaries.ipynb`**, which reproduces the key v
 |------|------------------------------------------------------------------------------|
 | Schemes compared | **Xavier/Glorot**, **He/Kaiming**, **Orthogonal**, **Uniform ±0.05**|
 | Activations | LASA (ours), Sine, ReLU, ELU, Mish |
-| Dataset | MNIST (train = 50 k, test = 10 k) |
 | Metrics logged | Test accuracy, loss, gradient‑norm statistics, final τ (frequency) values |
 
 ![image](https://github.com/user-attachments/assets/4ce0303e-96f9-4a3b-8c25-eea1c521498c)
