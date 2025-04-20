@@ -35,7 +35,6 @@ The folder contains **`Decision Boundaries.ipynb`**, which reproduces the key v
 | Yin‑Yang    | 16  | **0.98** | ReLU 0.85 |
 | Pinwheel    | 2   | **0.80** | Softplus 0.54 |
 
-(Full results are in `decision_boundaries/results.csv`.)
 
 ### Quick‑start
 
