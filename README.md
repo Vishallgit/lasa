@@ -18,6 +18,12 @@ That single scalar lets each layer glide from an *almost‑linear* regime (small
 # `decision_boundaries/` 
 
 The folder contains **`Decision Boundaries.ipynb`**, which reproduces the key visual experiments (Figures 9‑12, Table 1) from the LASA paper.
+![image](https://github.com/user-attachments/assets/472a9012-1426-4e28-96b8-bd826bfb4e81)
+![image](https://github.com/user-attachments/assets/4447ba0d-7472-499d-90cb-22824bf1d76c)
+![image](https://github.com/user-attachments/assets/8b0cdb2f-454f-4e06-bbfd-6bbcacbc0955)
+
+
+
 
 | What it does                                                                                    | How it’s implemented                              |
 | :------------------------------------------------------------------------------------------------ | :------------------------------------------------ |
@@ -34,6 +40,33 @@ The folder contains **`Decision Boundaries.ipynb`**, which reproduces the key v
 | Spiral      | 12  | **1.00** | Swish 0.75 |
 | Yin‑Yang    | 16  | **0.98** | ReLU 0.85 |
 | Pinwheel    | 2   | **0.80** | Softplus 0.54 |
+
+
+---
+
+## 🔧 Weight‑Initialisation Sweep (`weight_init.ipynb`)
+
+| Goal | Stress‑test LASA (and baselines) under different weight‑initialisation schemes |
+|------|------------------------------------------------------------------------------|
+| Schemes compared | **Xavier/Glorot**, **He/Kaiming**, **Orthogonal**, **Uniform ±0.05**|
+| Activations | LASA (ours), Sine, ReLU, ELU, Mish |
+| Dataset | MNIST (train = 50 k, test = 10 k) |
+| Metrics logged | Test accuracy, loss, gradient‑norm statistics, final τ (frequency) values |
+
+![image](https://github.com/user-attachments/assets/4ce0303e-96f9-4a3b-8c25-eea1c521498c)
+
+
+### How to reproduce
+
+```bash
+# 1 · Create / activate the environment
+conda env create -f ../../env.yaml          # first time only
+conda activate lasa
+
+# 2 · Run the notebook (will save results & figures automatically)
+papermill weight_init.ipynb \
+         -p dataset "mnist" \
+         -p n_seeds 20
 
 
 ### Quick‑start
