@@ -13,23 +13,22 @@ This repository provides a reference TensorFlow implementation together with sma
 
 ## Features
 
-- ✅ **LASA activation**:  
-  \(h(x) = \sin\big(\tau (Wx + b)\big)\) with a trainable, per-layer frequency \(\tau\).
+- LASA activation:  
+  h(x) = sin(τ (W x + b)) with a trainable, per-layer frequency τ.
 
-- ✅ **Angle-window regulariser**:  
-  Penalises \(|\cos\phi|\) when it leaves a target window, enforcing \(|\cos\phi| \le \sin\theta\) and thus controlling layer-wise gain.
+- Angle-window regulariser:  
+  Penalises |cos φ| when it leaves a target window, enforcing |cos φ| ≤ sin θ and thus controlling the layer-wise gain.
 
-- ✅ **Optional gain cap**:  
-  Reparametrisation of \(\tau\) to satisfy \(|\tau| \le \tau_{\max}\), which directly bounds  
-  \(g_\ell = |\tau_\ell| \,\|W_\ell\|\,\sin\theta_\ell\).
+- Optional gain cap:  
+  Reparameterisation of τ to satisfy |τ| ≤ τ_max, which directly bounds  
+  g_ℓ = |τ_ℓ| · ||W_ℓ|| · sin θ_ℓ.
 
-- ✅ **LASA-specific trainer**:  
-  Separate optimiser for \(\tau\), penalty warm-up, optional gradient-direction reversal and small “frequency bumps” when training stagnates.
+- LASA-specific trainer:  
+  Separate optimiser for τ, penalty warm-up, optional gradient-direction reversal and small “frequency bumps” when training stagnates.
 
-- ✅ **Activation comparison experiments**:  
-  LASA vs ReLU, Leaky ReLU, ELU, Softplus, Swish, Mish, GELU, Sine, Sigmoid, Tanh on 2D datasets with the **same architecture and training budget**.
+- Activation comparison experiments:  
+  LASA vs ReLU, Leaky ReLU, ELU, Softplus, Swish, Mish, GELU, Sine, Sigmoid, Tanh on 2D datasets with the same architecture and training budget.
 
----
 
 ## Repository structure
 
